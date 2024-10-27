@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBiblioteca.MainPage"
+             BackgroundColor="#282C40"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="WhiteFontLabelS" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+            <Style x:Key="WhiteFontLabelM" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout Margin="16">
+
+        <ListView x:Name="bookListView" HasUnevenRows="True" SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout Padding="8" Spacing="8">
+                            <Label Text="{Binding Titulo}" Style="{StaticResource WhiteFontLabelM}"/>
+                            <Label Text="{Binding Autor, StringFormat='Autor: {0}'}" FontSize="Small" Style="{StaticResource WhiteFontLabelS}"/>
+                            <Label Text="{Binding ISBN, StringFormat='ISBN: {0}'}" FontSize="Small" Style="{StaticResource WhiteFontLabelS}"/>
+                            <Label Text="{Binding CantidadCopias, StringFormat='Unidades: {0}'}" FontSize="Small" Style="{StaticResource WhiteFontLabelS}"/>
+                            <FlexLayout JustifyContent="SpaceAround">
+                                <Button Text="Prestar" Clicked="OnClickedPrestar" BackgroundColor="#3D3F54"/>
+                                <Button Text="Devolver" Clicked="OnClickedDevolver" Background="#4957A6"/>
+                            </FlexLayout>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+
+</ContentPage>

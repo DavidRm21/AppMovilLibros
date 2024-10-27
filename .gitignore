@@ -1,0 +1,67 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.tss
+*.sln.docstates
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+[Ll]ogs/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.DotNetCoreApp*
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Rider
+.idea/
+
+# Other
+*.db
+*.pdb
+*.class
+*.jar
+*.war
+*.log
+*.cache
+*.tmp
+*.temp
+*.pid
+*.seed
+*.ilk
+*.swp
+*.swo
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.xml
+
+# Local History for Visual Studio
+*.localhistory/
+
+# Auto-generated files
+*.Generated.cs
+*.g.cs
+*.g.i.cs
+
+# Publish folder
+publish/
